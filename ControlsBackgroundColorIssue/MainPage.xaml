@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlsBackgroundColorIssue.MainPage"
+             xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
+             xmlns:viewModels="clr-namespace:ControlsBackgroundColorIssue.ViewModels"
+             x:DataType="viewModels:MainViewModel">
+
+  <ContentPage.BindingContext>
+    <viewModels:MainViewModel/>
+  </ContentPage.BindingContext>
+
+  <ScrollView>
+    <VerticalStackLayout
+            Spacing="10"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+      <CheckBox BackgroundColor="{Binding SColor}"></CheckBox>
+
+      <RadioButton BackgroundColor="{Binding SColor}"></RadioButton>
+
+      <Stepper BackgroundColor="{Binding SColor}"></Stepper>
+
+      <Picker BackgroundColor="{Binding SColor}"></Picker>
+
+      <Label Text="Test label" BackgroundColor="{Binding SColor}"></Label>
+
+      <BoxView BackgroundColor="{Binding SColor}"></BoxView>
+
+      <Button BackgroundColor="{Binding SColor}"></Button>
+
+      <DatePicker BackgroundColor="{Binding SColor}"></DatePicker>
+
+      <Switch IsToggled="{Binding IsCounted}" OnColor="{Binding SColor}"></Switch>
+
+      <Entry Text="{Binding ValueS}" BackgroundColor="{Binding SColor}"></Entry>
+
+      <Picker ItemsSource="{Binding SColors}" SelectedItem="{Binding SelectedColor}" 
+            ItemDisplayBinding="{Binding ColorName}" BackgroundColor="{Binding SColor}" 
+            Background="{Binding SColor}"></Picker>
+
+    </VerticalStackLayout>
+  </ScrollView>
+
+</ContentPage>
