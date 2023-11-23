@@ -28,6 +28,7 @@ namespace ControlsBackgroundColorIssue.ViewModels
         }
       };
 
+      this.stepperValue = 0;
       this.IsCounted = true;
       this.SelectedColor = this.SColors.First();
     }
@@ -50,6 +51,17 @@ namespace ControlsBackgroundColorIssue.ViewModels
       set
       {
         this.valueS = value;
+        this.OnPropertyChanged();
+      }
+    }
+
+    private int stepperValue;
+    public int StepperValue
+    {
+      get => this.stepperValue;
+      set
+      {
+        this.stepperValue = value;
         this.OnPropertyChanged();
       }
     }

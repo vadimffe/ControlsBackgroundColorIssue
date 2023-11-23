@@ -20,11 +20,15 @@
 
       <RadioButton BackgroundColor="{Binding SColor}"></RadioButton>
 
-      <Stepper BackgroundColor="{Binding SColor}"></Stepper>
+      <Label Text="{Binding StepperValue}" BackgroundColor="{Binding SColor}"></Label>
+      <Stepper Value="{Binding StepperValue}" 
+               Maximum="100" 
+               Minimum="0" 
+               BackgroundColor="{Binding SColor}"></Stepper>
 
       <Picker BackgroundColor="{Binding SColor}"></Picker>
 
-      <Label Text="Test label" BackgroundColor="{Binding SColor}"></Label>
+      <Label Text="Test Label control" BackgroundColor="{Binding SColor}"></Label>
 
       <BoxView BackgroundColor="{Binding SColor}"></BoxView>
 
@@ -32,9 +36,9 @@
 
       <DatePicker BackgroundColor="{Binding SColor}"></DatePicker>
 
-      <Switch IsToggled="{Binding IsCounted}" OnColor="{Binding SColor}"></Switch>
+      <Switch IsToggled="{Binding IsCounted}" OnColor="{Binding SColor}" ThumbColor="Red"></Switch>
 
-      <Entry Text="{Binding ValueS}" BackgroundColor="{Binding SColor}"></Entry>
+      <Entry Text="Test Entry control" BackgroundColor="{Binding SColor}"></Entry>
 
       <Picker ItemsSource="{Binding SColors}" SelectedItem="{Binding SelectedColor}" 
             ItemDisplayBinding="{Binding ColorName}" BackgroundColor="{Binding SColor}" 
